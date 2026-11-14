@@ -1,5 +1,6 @@
 
 import java.util.LinkedList;
+import java.util.Map;
 
 public class StreamAPIMain {
     public static void main(String[] args) {
@@ -20,6 +21,8 @@ public class StreamAPIMain {
         System.out.println("Original List: " + list);
         System.out.println("List after removing duplicates: " + uniqueList);
 
-        
+        System.err.println("Frequency of each element in the list:");
+        Map<Integer, Long> frequencyList = fundamentals.getFrequenceList(list);
+        System.out.println("Frequency List: " + frequencyList);
     }
 }

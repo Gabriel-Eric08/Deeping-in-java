@@ -1,5 +1,8 @@
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Fundamentals {
@@ -13,4 +16,13 @@ public class Fundamentals {
         return uniqueList;
     }
 
-}   
+    public Map<Integer, Long> getFrequenceList(List<Integer> list) {
+        // TODO: Implement the logic to get the frequency of each element in the list
+        if (list == null || list.isEmpty()) {
+            return new HashMap<>();
+        }
+        Map<Integer, Long> frequencyList;
+        frequencyList = list.stream().collect(Collectors.groupingBy(n->n, Collectors.counting()));
+        return frequencyList;
+    }   
+}
